@@ -8,3 +8,5 @@ target/
 *.class
 target/
 *.class
+target/
+dependency-reduced-pom.xml
