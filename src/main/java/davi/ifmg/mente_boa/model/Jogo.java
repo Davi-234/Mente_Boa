@@ -2,6 +2,7 @@ package davi.ifmg.mente_boa.model;
 
 public class Jogo {
     
+    private int id;
     private String codigo;
     private int pontos;
     private Jogador jogador;
@@ -12,6 +13,22 @@ public class Jogo {
         this.pontos = pontos;
         this.jogador = jogador;
         this.data = data;
+    }
+    
+    public Jogo(int id, String codigo, int pontos, Jogador jogador, String data) {
+        this.id = id;
+        this.codigo = codigo;
+        this.pontos = pontos;
+        this.jogador = jogador;
+        this.data = data;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     public void setPontos(int pts){

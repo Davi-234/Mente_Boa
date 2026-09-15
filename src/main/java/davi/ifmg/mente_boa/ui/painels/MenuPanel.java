@@ -1,5 +1,6 @@
 package davi.ifmg.mente_boa.ui.painels;
 
+import davi.ifmg.mente_boa.bd.BancoDeDados;
 import davi.ifmg.mente_boa.ui.Tela;
 import davi.ifmg.mente_boa.ui.Pop_ups;
 import davi.ifmg.mente_boa.service.JogadorService;
@@ -118,6 +119,7 @@ public class MenuPanel extends JPanel {
     private void sair(java.awt.event.ActionEvent evt) {
         Sons.clicar();
         if (Pop_ups.telaDeConfirmação("Deseja sair do jogo?")) {
+            BancoDeDados.getInstance().salvar_dados();
             System.exit(0);
         }
     }
